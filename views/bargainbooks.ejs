@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"  type="text/css" href="/main.css" />
+        <title><%=shopData.shopName%></title>
+    </head>
+    <body>
+        <h1><%=shopData.shopName%> Bargain Books</h1>
+        <h2>Our books under £20</h2>
+           <ul>
+            <% availableBooks.forEach(book => { %>
+            <li>
+                <strong><%= book.name %></strong>
+                — £<%= book.price %>
+            </li>
+            <% }) %>
+    </ul>
+    </body>
+</html>

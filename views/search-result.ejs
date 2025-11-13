@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"  type="text/css" href="/main.css" />
+        <title><%=shopData.shopName%></title>
+    </head>
+    <body>
+        <% if (availableBooks.length === 0) { %>
+        <p>No books found.</p>
+    <% } else { %>
+        <ul>
+            <% availableBooks.forEach(book => { %>
+                <li>
+                    <strong><%= book.name %></strong>
+                    - £<%= book.price %>
+                </li>
+            <% }) %>
+        </ul>
+            <% } %>
+    </body>
+</html>
